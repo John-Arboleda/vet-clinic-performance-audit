@@ -9,6 +9,13 @@ where
 -- Solution for first query
 CREATE INDEX animals_visits_id ON visits(animal_id ASC);
 
+--second query
+SELECT * FROM visits where vet_id = 2;
+
+-- to optimize the second query we ran:
+
+CREATE INDEX visits_vet_id ON visits(vet_id ASC);
+
 --last query
 SELECT
   *
